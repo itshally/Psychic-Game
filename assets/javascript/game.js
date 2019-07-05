@@ -20,31 +20,22 @@ var winCount = document.getElementById('win-count'),
 
 // function that generates letters
 function generateLetter() {
-    console.log(letters[Math.floor(Math.random() * letters.length)]);
+    // console.log(letters[Math.floor(Math.random() * letters.length)]);
      return letters[Math.floor(Math.random() * letters.length)];
 }
 
+var x = generateLetter();
 
+// console.log(generateLetter());
 document.onkeypress = function(e) {
-    if(e.key !== generateLetter()){
-        typedLetters.innerHTML += e.key.toLowerCase()  + ", ";
-        
-        if(guess != 0){
-            guess--;
-            guessLeft.textContent = guess;
-        }else{
-            lose += 1;
-            loseCount.textContent = lose;
-            restart();
-        }
-        
+    //key must be alphabets only
+    if((e.keyCode >= 65 && e.keyCode <= 90) || (e.keyCode >= 97 && e.keyCode <= 122)){
+        console.log("letter");
     }else{
-        typedLetters.innerHTML = "matches";
-        win += 1;
-        winCount.textContent = win;
-        restart();
+        console.log("ERROR: You must enter letters only");
     }
-}
+    
+}//end of onkeypress
 
 //reset function
 function restart(){
