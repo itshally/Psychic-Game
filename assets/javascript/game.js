@@ -26,7 +26,7 @@ function generateLetter() {
 
 
 document.onkeypress = function(e) {
-    if(e.key !== x){
+    if(e.key !== generateLetter()){
         typedLetters.innerHTML += e.key.toLowerCase()  + ", ";
         
         if(guess != 0){
