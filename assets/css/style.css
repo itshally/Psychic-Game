@@ -11,18 +11,21 @@ html, body{
 }
 
 h1{
+    font-family: 'Megrim', cursive;
     font-size: 5em;
-    padding: 2%;
+    padding: 1.5%;
     color: #EADEDA;
     text-shadow: 0px 0px 10px #D90368;
 }
 
 h2{
+    font-family: 'MedievalSharp', cursive;
     margin-top: -2%;
     color: #FFD400;
 }
 
 .container{
+    font-family: 'Special Elite', cursive;
     position: absolute;
     top: 50%;
     left: 50%;
