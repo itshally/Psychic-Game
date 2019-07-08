@@ -13,15 +13,15 @@ var winCounter = document.getElementById('win-count'),
     letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k",
                 "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", 
                 "w", "x", "y", "z"];
-    winCounter.textContent = Number(winPoint);
-    loseCounter.textContent = Number(losePoint);
-    guessCounter.textContent = Number(guessesLeft);
+
+winCounter.textContent = Number(winPoint);
+loseCounter.textContent = Number(losePoint);
+guessCounter.textContent = Number(guessesLeft);
 
           
 //a function that generates letters
 function generateLetter(){
-    let letter = letters[Math.floor(Math.random() * letters.length)];
-    return letter;
+    return letters[Math.floor(Math.random() * letters.length)];
 }
 
 //a variable with a value of function
@@ -59,7 +59,7 @@ document.onkeypress = function(e) {
                 redAlert.textContent = "You lost! It's letter " + newLetter;
                 
                 //counter for lose points will increment to 1
-                losePoint += 1;
+                losePoint++;
                 loseCounter.textContent = losePoint;
 
                 //then the game will restart again
@@ -94,7 +94,7 @@ document.onkeypress = function(e) {
             greenAlert.textContent = "You got it! It's letter " + newLetter;
 
             //counter for win points will inrement to 1
-            winPoint += 1;
+            winPoint++;
             winCounter.textContent = winPoint;
 
             //then the game will restart again
